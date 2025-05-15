@@ -1,1 +1,27 @@
-<p>transaction works!</p>
+<div class="container">
+  <h2>Transactions</h2>
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Description</th>
+      <th>Category</th>
+      <th>Date</th>
+      <th>Amount</th>
+      <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let transaction of transactions">
+      <td>{{ transaction.description }}</td>
+      <td>{{ transaction.category }}</td>
+      <td>{{ transaction.date }}</td>
+      <td [ngClass]="{'text-success': transaction.amount > 0, 'text-danger': transaction.amount < 0}">
+        {{ transaction.amount | currency }}
+      </td>
+      <td>
+        <button class="btn btn-danger btn-sm" (click)="deleteTransaction(transaction.id!)">Delete</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
