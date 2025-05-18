@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {BudgetService} from "../../Services/budget.service";
+import {BudgetService} from "../../service/budget.service";
 import {Budget} from "../../Models/budget.model";
 
 @Component({

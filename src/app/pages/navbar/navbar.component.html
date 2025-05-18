@@ -1,1 +1,33 @@
-<p>navbar works!</p>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand custom-brand" href="#">Soufyane Felate</a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav d-flex flex-row flex-wrap justify-content-center gap-3 my-2 my-lg-0 align-items-center">
+        <li *ngFor="let item of navItems" class="nav-item">
+          <a
+            class="nav-link text-light"
+            [href]="item.type === 'link' ? item.link : null"
+            (click)="handleItemClick(item, $event)"
+          >{{ item.label }}</a>
+        </li>
+
+      </ul>
+    </div>
+
+  </div>
+</nav>

@@ -1,32 +1,32 @@
 import { Component, inject } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { TransactionService, Transaction } from './transaction.service'; 
-import { FormsModule } from '@angular/forms';
+import {CommonModule, NgFor} from '@angular/common';
+import {FormsModule, NgForm} from '@angular/forms';
+import {Transaction, TransactionService} from "../../service/service.transactions.component";
 
 @Component({
   selector: 'app-transactions',
   standalone: true,
-  imports: [CommonModule, FormsModule],
-  templateUrl: './transactions.component.html',
-  styleUrls: ['./transactions.component.css']
+  imports: [CommonModule, FormsModule,NgFor],
+  templateUrl: 'transaction.component.html',
+  styleUrls: ['transaction.component.css']
 })
 export class TransactionComponent {
   private transactionService = inject(TransactionService);
   transactions: Transaction[] = [];
 
   ngOnInit() {
-    this.loadTransactions();
+    //this.loadTransactions();
   }
 
-  loadTransactions() {
-    this.transactionService.getAll().subscribe(data => {
-      this.transactions = data;
-    });
-  }
-
-  deleteTransaction(id: number) {
-    this.transactionService.delete(id).subscribe(() => {
-      this.transactions = this.transactions.filter(t => t.id !== id);
-    });
-  }
+  // loadTransactions() {
+  //   this.transactionService.getAll().subscribe(data => {
+  //     this.transactions = data;
+  //   });
+  // }
+  //
+  // deleteTransaction(id: number) {
+  //   this.transactionService.delete(id).subscribe(() => {
+  //     this.transactions = this.transactions.filter(t => t.id !== id);
+  //   });
+  // }
 }

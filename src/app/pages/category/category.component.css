@@ -1,0 +1,122 @@
+body {
+  background-color: #13151a;
+  color: white;
+  font-family: Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  max-width: 1100px;
+
+  padding: 15px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.create-btn {
+  background-color: rgba(138, 75, 175, 0.2);
+  color: #c280ff;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+
+.create-btn i {
+  margin-right: 8px;
+  font-size: 12px;
+}
+
+.category-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.category-info {
+  display: flex;
+  align-items: center;
+}
+
+.category-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+}
+
+.housing-icon {
+  background-color: #9370db;
+}
+
+.food-icon {
+  background-color: #34c3eb;
+}
+
+.transport-icon {
+  background-color: #f45b69;
+}
+
+.entertainment-icon {
+  background-color: #ff7f50;
+}
+
+.shopping-icon {
+  background-color: #da70d6;
+}
+
+.healthcare-icon {
+  background-color: #3cb371;
+}
+
+.category-text h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.category-text p {
+  font-size: 14px;
+  color: #aaa;
+  margin: 0;
+}
+
+.action-buttons {
+  display: flex;
+}
+
+.action-btn {
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 18px;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.action-btn:hover {
+  color: #ccc;
+}
